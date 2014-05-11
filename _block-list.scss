@@ -1,0 +1,70 @@
+///*------------------------------------*\
+//    #BLOCK-LIST
+//\*------------------------------------*/
+
+// The block list object creates blocky list items out of a `ul` or `ol`.
+
+// Predefine the variables below in order to alter and enable specific features.
+$tree-block-list-padding:           $tree-base-spacing-unit !default;
+$tree-block-list-padding--small:    halve($tree-block-list-padding) !default;
+$tree-block-list-padding--large:    double($tree-block-list-padding) !default;
+
+$tree-enable-block-list--small:     false !default;
+$tree-enable-block-list--large:     false !default;
+
+.#{$tree-namespace}block-list,
+%#{$tree-namespace}block-list {
+    margin: 0;
+    padding: 0;
+    list-style: 0;
+
+    > li {
+        @extend %#{$tree-namespace}block-list__item;
+    }
+
+}
+
+.#{$tree-namespace}block-list__item,
+%#{$tree-namespace}block-list__item {
+    padding: $tree-block-list-padding;
+}
+
+
+
+
+
+@if ($tree-enable-block-list--small == true) {
+
+    // Small block-lists.
+
+    .#{$tree-namespace}block-list--small,
+    %#{$tree-namespace}block-list--small {
+
+        > .#{$tree-namespace}block-list__item,
+        > %#{$tree-namespace}block-list__item {
+            padding: $tree-block-list-padding--small;
+        }
+
+    }
+
+}
+
+
+
+
+
+@if ($tree-enable-block-list--large == true) {
+
+    // Large block-lists.
+
+    .#{$tree-namespace}block-list--large,
+    %#{$tree-namespace}block-list--large {
+
+        > .#{$tree-namespace}block-list__item,
+        > %#{$tree-namespace}block-list__item {
+            padding: $tree-block-list-padding--large;
+        }
+
+    }
+
+}
