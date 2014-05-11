@@ -1,0 +1,19 @@
+{
+  "name": "tree-block-list",
+  "version": "0.1.0",
+  "homepage": "https://github.com/treeframework/object.block-list",
+  "authors": [
+    "Ilia Kolev <treeframework@iliakolev.com>"
+  ],
+  "description": "TreeFramework - simple blocky-list object.",
+  "main": "_block-list.scss",
+  "keywords": [
+    "TreeFramework",
+    "css"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "tree-defaults": "latest",
+    "tree-functions": "latest"
+  }
+}
