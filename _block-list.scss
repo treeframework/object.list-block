@@ -16,7 +16,7 @@ $tree-enable-block-list--large:     false !default;
 %#{$tree-namespace}block-list {
     margin: 0;
     padding: 0;
-    list-style: 0;
+    list-style: none;
 
     > li {
         @extend %#{$tree-namespace}block-list__item;
