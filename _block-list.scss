@@ -7,6 +7,8 @@
 // The block list object creates blocky list items out of a `ul` or `ol`.
 
 // Predefine the variables below in order to alter and enable specific features.
+$tree-block-list-namespace:         $tree-namespace !default;
+
 $tree-block-list-padding:           $tree-base-spacing-unit !default;
 $tree-block-list-padding--tiny:     quarter($tree-block-list-padding) !default;
 $tree-block-list-padding--small:    halve($tree-block-list-padding) !default;
@@ -16,20 +18,20 @@ $tree-enable-block-list--tiny:      false !default;
 $tree-enable-block-list--small:     false !default;
 $tree-enable-block-list--large:     false !default;
 
-.#{$tree-namespace}block-list,
-%#{$tree-namespace}block-list {
+.#{$tree-block-list-namespace}block-list,
+%#{$tree-block-list-namespace}block-list {
     margin: 0;
     padding: 0;
     list-style: none;
 
     > li {
-        @extend %#{$tree-namespace}block-list__item;
+        @extend %#{$tree-block-list-namespace}block-list__item;
     }
 
 }
 
-.#{$tree-namespace}block-list__item,
-%#{$tree-namespace}block-list__item {
+.#{$tree-block-list-namespace}block-list__item,
+%#{$tree-block-list-namespace}block-list__item {
     padding: $tree-block-list-padding;
 }
 
@@ -41,11 +43,11 @@ $tree-enable-block-list--large:     false !default;
 
     // Tiny block-lists.
 
-    .#{$tree-namespace}block-list--tiny,
-    %#{$tree-namespace}block-list--tiny {
+    .#{$tree-block-list-namespace}block-list--tiny,
+    %#{$tree-block-list-namespace}block-list--tiny {
 
-        > .#{$tree-namespace}block-list__item,
-        > %#{$tree-namespace}block-list__item {
+        > .#{$tree-block-list-namespace}block-list__item,
+        > %#{$tree-block-list-namespace}block-list__item {
             padding: $tree-block-list-padding--tiny;
         }
 
@@ -61,11 +63,11 @@ $tree-enable-block-list--large:     false !default;
 
     // Small block-lists.
 
-    .#{$tree-namespace}block-list--small,
-    %#{$tree-namespace}block-list--small {
+    .#{$tree-block-list-namespace}block-list--small,
+    %#{$tree-block-list-namespace}block-list--small {
 
-        > .#{$tree-namespace}block-list__item,
-        > %#{$tree-namespace}block-list__item {
+        > .#{$tree-block-list-namespace}block-list__item,
+        > %#{$tree-block-list-namespace}block-list__item {
             padding: $tree-block-list-padding--small;
         }
 
@@ -81,11 +83,11 @@ $tree-enable-block-list--large:     false !default;
 
     // Large block-lists.
 
-    .#{$tree-namespace}block-list--large,
-    %#{$tree-namespace}block-list--large {
+    .#{$tree-block-list-namespace}block-list--large,
+    %#{$tree-block-list-namespace}block-list--large {
 
-        > .#{$tree-namespace}block-list__item,
-        > %#{$tree-namespace}block-list__item {
+        > .#{$tree-block-list-namespace}block-list__item,
+        > %#{$tree-block-list-namespace}block-list__item {
             padding: $tree-block-list-padding--large;
         }
 
