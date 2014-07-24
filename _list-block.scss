@@ -10,13 +10,15 @@
 $tree-list-block-namespace:         $tree-namespace !default;
 
 $tree-list-block-padding:           $tree-base-spacing-unit !default;
-$tree-list-block-padding--tiny:     quarter($tree-list-block-padding) !default;
-$tree-list-block-padding--small:    halve($tree-list-block-padding) !default;
-$tree-list-block-padding--large:    double($tree-list-block-padding) !default;
+$tree-list-block-padding--tiny:       quarter($tree-list-block-padding) !default;
+$tree-list-block-padding--small:        halve($tree-list-block-padding) !default;
+$tree-list-block-padding--large:       double($tree-list-block-padding) !default;
+$tree-list-block-padding--huge:     quadruple($tree-list-block-padding) !default;
 
 $tree-enable-list-block--tiny:      false !default;
 $tree-enable-list-block--small:     false !default;
 $tree-enable-list-block--large:     false !default;
+$tree-enable-list-block--huge:      false !default;
 
 .#{$tree-list-block-namespace}list-block,
 %#{$tree-list-block-namespace}list-block {
@@ -55,10 +57,6 @@ $tree-enable-list-block--large:     false !default;
 
 }
 
-
-
-
-
 @if ($tree-enable-list-block--small == true) {
 
     // Small list-blocks.
@@ -75,10 +73,6 @@ $tree-enable-list-block--large:     false !default;
 
 }
 
-
-
-
-
 @if ($tree-enable-list-block--large == true) {
 
     // Large list-blocks.
@@ -89,6 +83,22 @@ $tree-enable-list-block--large:     false !default;
         > .#{$tree-list-block-namespace}list-block__item,
         > %#{$tree-list-block-namespace}list-block__item {
             padding: $tree-list-block-padding--large;
+        }
+
+    }
+
+}
+
+@if ($tree-enable-list-block--huge == true) {
+
+    // Huge list-blocks.
+
+    .#{$tree-list-block-namespace}list-block--huge,
+    %#{$tree-list-block-namespace}list-block--huge {
+
+        > .#{$tree-list-block-namespace}list-block__item,
+        > %#{$tree-list-block-namespace}list-block__item {
+            padding: $tree-list-block-padding--huge;
         }
 
     }
