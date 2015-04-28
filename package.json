@@ -1,7 +1,7 @@
 {
   "name": "tree-list-block",
   "description": "A simple blocky-list.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "author": "Ilia Kolev <info@iliakolev.com>",
   "bugs": {
     "url": "https://github.com/treeframework/object.list-block/issues"
@@ -12,8 +12,8 @@
   },
   "homepage": "https://github.com/treeframework/object.list-block",
   "keywords": [
-    "oocss",
-    "css"
+    "css",
+    "oocss"
   ],
   "license": "MIT",
   "main": "_object.list-block.scss",
